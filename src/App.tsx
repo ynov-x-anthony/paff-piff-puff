@@ -17,9 +17,10 @@ function App() {
 
   return (
     <main>
-      <h1>Défi Final</h1>
+      <h1>Défi Final - Atelier React</h1>
       <h2>Agents Valorant</h2>
-      <h3>Choisis l'agent que tu préfères jouer:</h3>
+      <h3>Choisis l'agent que tu préfères jouer :</h3>
+
       <div className="agents-container">
         {agents.map((agent) => (
           <AgentValorant

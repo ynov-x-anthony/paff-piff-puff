@@ -1,14 +1,22 @@
 import { useState } from "react";
 
-function AgentValorant({ firstName, image }: { firstName: string; image: string }) {
+interface AgentProps {
+  firstName: string;
+  image: string;
+}
+
+function AgentValorant({ firstName, image }: AgentProps) {
   const [points, setPoints] = useState(0);
+  const handleAddPoint = () => {
+    setPoints(points + 1);
+  };
 
   return (
-    <section>
+    <section className="agent-card">
       <h2>{firstName}</h2>
       <img src={image} alt={firstName} />
-      <p>👍: {points}</p>
-      <button onClick={() => setPoints(points + 1)}>
+      <p>👍 Points : {points}</p>
+      <button onClick={handleAddPoint}>
         Ajouter un point
       </button>
     </section>
